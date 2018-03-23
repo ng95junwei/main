@@ -177,7 +177,7 @@ Examples:
 * `deletebefore d/12/12/2017 t/friends` +
 Deletes all friends added before 12/12/2017 in the address book.
 
-=== Emailing a person : `email` or `em`
+=== Emailing selected persons : `email` or `em`
 
 Emails a person based on the specified name.
 Format: `email KEYWORD [MORE KEYWORDS]`
@@ -187,6 +187,26 @@ Format: `email KEYWORD [MORE KEYWORDS]`
 * Search is case insensitive. e.g. hans will match Hans
 * Persons matching at least one keyword will be emailed. eg. Hans Bo will email Hans Gruber, Bo Yang
 ****
+
+=== Emailing a person : `emailone` or `eo` [Coming in 2.0]
+
+Emails a person identified by the index number used in the last person listing. +
+Format: `select INDEX` or `s INDEX`
+
+****
+* Emails the person at the specified `INDEX`.
+* The index refers to the index number shown in the most recent listing.
+* The index *must be a positive integer* `1, 2, 3, ...`
+****
+
+Examples:
+
+* `list` +
+`email 2` +
+Emails the 2nd person in the address book.
+* `find Betsy` +
+`email 1` +
+Emails the 1st person in the results of the `find` command.
 
 === Selecting a person : `select` or `s`
 
